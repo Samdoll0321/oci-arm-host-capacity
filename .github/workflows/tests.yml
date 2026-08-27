@@ -17,14 +17,14 @@ jobs:
         run: composer install --no-progress
       - name: Create .env file
         run: |
-  echo "OCI_REGION='${{ secrets.OCI_REGION }}'" >> .env
-  echo "OCI_USER_ID='${{ secrets.OCI_USER_ID }}'" >> .env
-  echo "OCI_TENANCY_ID='${{ secrets.OCI_TENANCY_ID }}'" >> .env
-  echo "OCI_KEY_FINGERPRINT='${{ secrets.OCI_KEY_FINGERPRINT }}'" >> .env
-  echo "OCI_PRIVATE_KEY_FILENAME='${{ secrets.OCI_PRIVATE_KEY_FILENAME }}'" >> .env
-  echo "OCI_SUBNET_ID='${{ secrets.OCI_SUBNET_ID }}'" >> .env
-  echo "OCI_IMAGE_ID='${{ secrets.OCI_IMAGE_ID }}'" >> .env
-  echo "OCI_SSH_PUBLIC_KEY='${{ secrets.OCI_SSH_PUBLIC_KEY }}'" >> .env
-  echo "OCI_SHAPE='${{ secrets.OCI_SHAPE }}'" >> .env
+          echo "OCI_REGION='${{ secrets.OCI_REGION }}'" >> .env
+          echo "OCI_USER_ID='${{ secrets.OCI_USER_ID }}'" >> .env
+          echo "OCI_TENANCY_ID='${{ secrets.OCI_TENANCY_ID }}'" >> .env
+          echo "OCI_KEY_FINGERPRINT='${{ secrets.OCI_KEY_FINGERPRINT }}'" >> .env
+          echo "OCI_PRIVATE_KEY_FILENAME='${{ secrets.OCI_PRIVATE_KEY_FILENAME }}'" >> .env
+          echo "OCI_SUBNET_ID='${{ secrets.OCI_SUBNET_ID }}'" >> .env
+          echo "OCI_IMAGE_ID='${{ secrets.OCI_IMAGE_ID }}'" >> .env
+          echo "OCI_SSH_PUBLIC_KEY='${{ secrets.OCI_SSH_PUBLIC_KEY }}'" >> .env
+          echo "OCI_SHAPE='${{ secrets.OCI_SHAPE }}'" >> .env
       - name: Run script
         run: php index.php
